@@ -49,7 +49,7 @@ router.get('/api/students', (req, res) =>
         if (err)
         {
             console.log("Failed to get student list \n Error: " + JSON.stringify(err, undefined, 2));
-            res.sendStatus(500); // Internal Server Error
+            res.sendStatus(404); // Table not found
             return;
         }
         
@@ -70,7 +70,7 @@ router.get('/api/teachers', (req, res) =>
         if (err)
         {
             console.log("Failed to get teachers list \n Error: " + JSON.stringify(err, undefined, 2));
-            res.sendStatus(500); // Internal Server Error
+            res.sendStatus(404); // Table not found
             return;
         }
         
@@ -103,7 +103,7 @@ router.get('/api/associations', (req, res) =>
         if (err)
         {
             console.log("Failed to get associations list \n Error: " + JSON.stringify(err, undefined, 2));
-            res.sendStatus(500); // Internal Server Error
+            res.sendStatus(404); // Table not found
             return;
         }
         
@@ -290,6 +290,7 @@ router.post("/api/register", (req, res) =>
 
             });
         }   
+        // Success
         res.status(204);
         res.end();
     });
