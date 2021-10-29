@@ -3,20 +3,6 @@ Project: NodeJS_API_Assessment
 File: app.js
 Desc: Student database for teachers to perform various administrative tasks (Govtech NodeJS programming test)
 Author: Low Jian Wei Damien
-
-Project Overview: 
-
-TODO: 
-- Use DB name in all endpoints
-- POSTMAN Unit testing
-- Readme update
-- Security checking
-- Upload to repo
-- Error message for all endpoints
-- Error for repeat / Invalid data
-
-Known issues:
-
 ============================================================================================================= */
 
 // === Inits ===

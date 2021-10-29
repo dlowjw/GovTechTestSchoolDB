@@ -15,7 +15,8 @@ Filtering GET Endpoints
 [COMMON] 1) '/api/commonstudents?(teacher=? params)' - Retrieve all students assigned to specific teacher(s)
 
 POST Endpoints
-[REGIS] 1) '/api/register'                  - Register student(s) to a specific teacher
+[REGIS] 1) '/api/register'                  - Register student(s) to a specific teacher 
+                                              (Implementation adds the teacher to DB if not already present)
 [SUSP]  2) '/api/suspend'                   - Suspend a student
 [NOTIF] 3) '/api/retrievefornotifications'  - Notifies mentioned or students assigned to specific teacher
                                               (NOTE: Student must NOT be suspended)
@@ -160,7 +161,7 @@ router.get('/api/commonstudents', (req, res) =>
 // === POST requests ===
 
 // [REGIS]
-// Register student(s) to a specific teacher
+// Register student(s) to a specific teacher (Implementation adds the teacher to DB if not already present)
 router.post("/api/register", (req, res) =>
 {
     // Register student to student table

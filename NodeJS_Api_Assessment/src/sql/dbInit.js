@@ -3,7 +3,6 @@ Project: NodeJS_API_Assessment
 File: dbInit.js
 Desc: Initialize the database (Setup mysql + create db if not on local machine)
 Author: Low Jian Wei Damien
-
 ============================================================================================================= */
 
 const mysql = require('mysql');
