@@ -30,7 +30,7 @@ Filtering GET Endpoints
 1) '/api/commonstudents?(teacher=? params)' - Retrieve all students assigned to specific teacher(s)
 
 JSON Body Example 1:
-
+```
 {
     "students" :
     [
@@ -39,9 +39,10 @@ JSON Body Example 1:
         "student_only_under_teacher_ken@gmail.com"
     ]
 }
+```
 
 JSON Body Example 2:
-
+```
 {
     "students" :
     [
@@ -49,12 +50,12 @@ JSON Body Example 2:
         "commonstudent2@gmail.com"
     ]
 }
-
+```
 POST Endpoints
 1) '/api/register' - Register student(s) to a specific teacher (Implementation adds the teacher to DB if not already present)
 
 JSON Body Example:
-
+```
 {
     "teacher": "teacherken@gmail.com"
     "students":
@@ -63,26 +64,27 @@ JSON Body Example:
         "studenthon@example.com"
     ]
 }
-
+```
 
 2) '/api/suspend'                   - Suspend a student
 
 JSON Body Example:
-
+```
 {
     "student" : "studentmary@gmail.com"
 }
-
+```
 3) '/api/retrievefornotifications'  - Notifies mentioned or students assigned to specific teacher  (NOTE: Student must NOT be suspended)
 
 JSON Body Example:
+```
 {
     "teacher": "teacherken@example.com",
     "notification": "Hello students! @studentagnes@example.com @studentmiche@example.com"
 }
-
+```
 Success Body for Example (studentbob@example.com registed under teacherken@example.com):
-
+```
 {
     "recipients":
     [
@@ -91,7 +93,7 @@ Success Body for Example (studentbob@example.com registed under teacherken@examp
         "studentmiche@example.com"
     ]
 }
-
+```
 ### TODO / Known Issues
 
 - In the registration api call, we add to all 3 tables (teachers -> students -> associations) and there might be cases where we should reject 
