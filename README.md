@@ -21,6 +21,10 @@ associations    - id, teacherID, studentID
 
 ### API Calls
 
+Send them to localhost:3000
+
+Example: localhost:3000/api/students
+
 General GET full DB table Endpoints (Not part of Assessment, added to check the database)
 1) '/api/students'      - Retrieve all students in the DB
 2) '/api/teachers'      - Retrieve all teachers in the DB
@@ -100,5 +104,5 @@ Success Body for Example (studentbob@example.com registed under teacherken@examp
     every inputs but because of the nested queries sometimes the call might add to teachers and / or students and fail at a later call.
     Unfortunately, due to time constraints I have not found a better way to implement it yet. I implemented 3 different tables this way because
     it was mentioned that teachers can register to multiple students and vice versa and I could not find a better way around it as of now. 
-- Check & Return appropriate errors for bad inputs
+- Could not figure out how to appropriately return a JSON body along with a bad request when one is made, went with just the bad server codes only for now.
 - More testing & Cleanup
