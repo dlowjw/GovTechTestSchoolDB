@@ -105,4 +105,5 @@ Success Body for Example (studentbob@example.com registed under teacherken@examp
     Unfortunately, due to time constraints I have not found a better way to implement it yet. I implemented 3 different tables this way because
     it was mentioned that teachers can register to multiple students and vice versa and I could not find a better way around it as of now. 
 - Could not figure out how to appropriately return a JSON body along with a bad request when one is made, went with just the bad server codes only for now.
+- There isn't a check for repeat / invalid data, having trouble trying to properly implement it
 - More testing & Cleanup
